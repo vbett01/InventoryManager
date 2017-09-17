@@ -1,0 +1,241 @@
+extends layout
+
+
+block content
+
+
+    // !PAGE CONTENT!
+    .w3-main(style='margin-left:300px;margin-top:43px;')
+      // Header
+      header.w3-container(style='padding-top:22px')
+        h5
+          b
+            i.fa.fa-dashboard
+            |  My Dashboard
+      .w3-row-padding.w3-margin-bottom
+        .w3-quarter
+          a.w3-bar-item.w3-button.w3-red.w3-padding-16(onclick="document.getElementById('id01').style.display='block'", style='width:auto;')
+            .w3-left
+              i.fa.fa-money.w3-xxxlarge
+            .w3-right
+            .w3-clear
+            h4 Sell Item
+        .w3-quarter
+          a.w3-bar-item.w3-button.w3-blue.w3-padding-16(onclick="document.getElementById('id02').style.display='block'", style='width:auto;')
+            .w3-left
+              i.fa.fa-plus-circle.w3-xxxlarge
+            .w3-right
+            .w3-clear
+            h4 Add Item
+        .w3-quarter
+          a.w3-bar-item.w3-button.w3-teal.w3-padding-16(onclick="document.getElementById('id03').style.display='block'", style='width:auto;')
+            .w3-left
+              i.fa.fa-search.w3-xxxlarge
+            .w3-right
+            .w3-clear
+            h4 Find Item
+        .w3-quarter
+          a.w3-bar-item.w3-button.w3-orange.w3-padding-16(onclick="document.getElementById('id04').style.display='block'", style='width:auto;')
+            .w3-left
+              i.fa.fa-undo.w3-xxxlarge
+            .w3-right
+            .w3-clear
+            h4 Return Item
+      .w3-panel
+        .w3-row-padding(style='margin:0 -16px')
+          .w3-third
+          .w3-twothird
+            h5 Sales Activity
+            table.w3-table.w3-striped.w3-white
+              tr
+                td
+                  i.fa.fa-thumbs-up.w3-text-blue.w3-large
+                td Top selling Item
+                td
+                  i Samsung smartphone
+              tr
+                td
+                  i.fa.fa-thumbs-down.w3-text-red.w3-large
+                td Least selling Item
+                td
+                  i Salt
+              tr
+                td
+                  i.fa.fa-usd.w3-text-teal.w3-large
+                td Anticipated profit
+                td
+                  i 40000
+              tr
+                td
+                  i.fa.fa-users.w3-text-teal.w3-large
+                td New Customers
+                td
+                  i 25
+      hr
+      .w3-container
+        h5 General Stats
+        p Sales Percentage
+        .w3-grey
+          a.w3-bar-item.w3-button.w3-padding.w3-green(href='#')(style='width:25%') +25%
+        p New Customers
+        .w3-grey
+          a.w3-bar-item.w3-button.w3-padding.w3-orange(href='#')(style='width:50%') 50%
+        p Turnover rate
+        .w3-grey
+          a.w3-bar-item.w3-button.w3-padding.w3-red(href='#')(style='width:75%') 75%
+      hr
+
+      .w3-container.w3-dark-grey.w3-padding-32
+        .w3-row
+          .w3-container.w3-third
+          .w3-container.w3-third
+          .w3-container.w3-third
+            h5.w3-bottombar.w3-border-blue Contact Us.
+            a.w3-bar-item.w3-button(href='#') Email
+            a.w3-bar-item.w3-button(href='#') Twitter
+            a.w3-bar-item.w3-button(href='#') Facebook
+            a.w3-bar-item.w3-button(href='#') Instagram
+
+            #id01.modal
+              form.modal-content.animate(action='/action_page.php')
+                .w3-container
+                  h5
+                    b
+                      font(color='black') Scan product code or enter name
+                  label
+                    b
+                      font(color='black') Code
+                  input(type='text', placeholder='Product Code', name='Pcode', required='')
+                  label
+                    b
+                      font(color='black') Name
+                  input(type='text', placeholder='Enter Name', name='Pname', required='')
+                  label
+                    b
+                      font(color='black') Price
+                  input(type='text', placeholder='Total Price', name='Pname', required='')
+                  button(type='submit') Sell
+                .container(style='background-color:#f1f1f1')
+                  button.cancelbtn(type='button', onclick="document.getElementById('id01').style.display='none'") Cancel
+
+
+            #id02.modal
+              form.modal-content.animate(action='/action_page.php')
+                .w3-container
+                  h5
+                    b
+                      font(color='black') Scan product code and enter name
+                  label
+                    b
+                      font(color='black') Code
+                  input(type='text', placeholder='Product Code', name='Pcode', required='')
+                  label
+                    b
+                      font(color='black') Name
+                  input(type='text', placeholder='Enter Name', name='Pname', required='')
+
+                  button(type='submit') Add.
+                .container(style='background-color:#f1f1f1')
+                  button.cancelbtn(type='button', onclick="document.getElementById('id02').style.display='none'") Cancel
+
+            #id03.modal
+              form.modal-content.animate(action='/action_page.php')
+                .w3-container
+                  h5
+                    b
+                      font(color='black') Enter Item Code or Name
+                  label
+                    b
+                      font(color='black') Code
+                  input(type='text', placeholder='Product Code', name='Pcode', required='')
+                  label
+                    b
+                      font(color='black') Name
+                  input(type='text', placeholder='Enter Name', name='Pname', required='')
+
+                  button(type='submit') Find.
+                .container(style='background-color:#f1f1f1')
+                  button.cancelbtn(type='button', onclick="document.getElementById('id03').style.display='none'") Cancel
+
+
+
+
+            #id04.modal
+              form.modal-content.animate(action='/action_page.php')
+                .w3-container
+                  h5
+                    b
+                      font(color='black') Enter Item Code
+                  label
+                    b
+                      font(color='black') Code
+                  input(type='text', placeholder='Product Code', name='Pcode', required='')
+
+                  button(type='submit') Return.
+                .container(style='background-color:#f1f1f1')
+                  button.cancelbtn(type='button', onclick="document.getElementById('id04').style.display='none'") Cancel
+
+
+
+    // End page content
+    script.
+      // Get the Sidebar
+      var mySidebar = document.getElementById("mySidebar");
+      // Get the DIV with overlay effect
+      var overlayBg = document.getElementById("myOverlay");
+      // Toggle between showing and hiding the sidebar, and add overlay effect
+      function w3_open() {
+      if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      overlayBg.style.display = "none";
+      } else {
+      mySidebar.style.display = 'block';
+      overlayBg.style.display = "block";
+      }
+      }
+      // Close the sidebar with the close button
+      function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+      }
+
+
+    script.
+      // Get the modal
+      var modal = document.getElementById('id01');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
+
+
+      // Get the modal
+      var modal = document.getElementById('id02');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
+
+
+      // Get the modal
+      var modal = document.getElementById('id03');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
+
+
+      // Get the modal
+      var modal = document.getElementById('id04');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }

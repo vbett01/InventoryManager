@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .w3-main(style='margin-left:300px;margin-top:43px;')
+
+      // register form
+      form(method='POST' action='/add-product')
+        div.form-group
+          label(for='name') Product Name:
+          input#name.form-control(type='text', placeholder='Name' name='name')
+        div.form-group
+          label(for='manufacturer') Manufacturer/Producer:
+          input#manufacturer.form-control(type='text', placeholder='name' name='manufacturer')
+        div.form-group
+          label(for='barcode') Barcode:
+          input#barcode.form-control(type='number', placeholder='code' name='code')
+        div.form-group
+          label(for='category') Product Category:
+          input#category.form-control(type='text', placeholder = 'Clothing, footstuff etc..' name='category')
+        div.form-group
+          label(for='description') Description:
+          input#description.form-control(type='text' name='description')
+        button.btn.btn-primary(type='submit') Add!
