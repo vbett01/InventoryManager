@@ -57,6 +57,11 @@ exports.login_user_get  = function(req, res, next){
   return res.render('login',{title: 'Log In'});
 };
 
+// Function to show the current user inventory
+exports.get_user_inventory = function(req, res, next){
+  return res.render('inventory');
+}
+
 
 // Login the user and show the profile
 exports.login_user_post = function(req, res, next){

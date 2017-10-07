@@ -1,0 +1,36 @@
+title Nest Egg | #{title}
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width, initial-scale=1')
+link(rel='stylesheet', href='/stylesheets/w3.css')
+link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway')
+link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+link(rel='stylesheet', href='/stylesheets/modal.css')
+style.
+  html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+body.w3-light-grey
+  // Top container
+  .w3-bar.w3-top.w3-black.w3-large(style='z-index:4')| #{StoreName}
+    button.w3-bar-item.w3-button.w3-hide-large.w3-hover-none.w3-hover-text-light-grey(onclick='w3_open();')
+      i.fa.fa-bars
+      |   Menu
+    span.w3-bar-item.w3-right
+      a.w3-bar-item.w3-button(href='/logout')
+        i.fa.fa-sign-out
+    .w3-bar-item.w3-left
+      a.w3-bar-item.w3-button(href='/profile')
+        i.fa.fa-lightbulb-o
+
+
+body
+// load navbar.jade
+  include sidebar
+
+// content block
+block content
+
+// footer
+p.foot.text-xs-center Vince!
+
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js', integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7', crossorigin='anonymous')

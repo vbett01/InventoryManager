@@ -16,6 +16,8 @@ router.post('/login', userController.login_user_post);
 
 // Get profile
 router.get('/profile',midd.requiresLogin, userController.get_user_profile);
+// Get the user inventory
+router.get('/profile/inventory',midd.requiresLogin, userController.get_user_inventory );
 
 // Get /Logout
 router.get('/logout', userController.logout_user);
@@ -45,6 +47,10 @@ router.get('/about', function(req, res, next) {
 // Get /Contact
 router.get('/contact', function(req, res, next) {
   res.render('contact', {title:'Contact'})
+});
+// Get company login
+router.get('/company', function(req, res, next){
+  res.render('companyProfile');
 });
 
 module.exports = router;
