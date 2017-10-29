@@ -1,4 +1,5 @@
 Project : Inventory Manager(Front end implementation)
+
 Author: Vincent Bett
 
 PURPOSE:
@@ -14,14 +15,23 @@ ACKNOWLEDGEMENTS:
 
 HOW RUN:
 	To run the program
+	
 		Download express to your machine.
+		
 		Install dependencies listed in the JSON file.
+		
 			To install the dependencies;
+			
 				open terminal 
+				
 				cd to the project and type
+				
 					npm install <Dependency name> --save
+					
 			run the program by typing 
+			
 					DEBUG=bunny:* npm start
+					
 			then press enter
 			
 	
